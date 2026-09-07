@@ -1,0 +1,349 @@
+---
+title: "BIOL343 Coding Challenge 1"
+author: "Group Members"
+date: "2026-09-02"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# BIOL343 Coding Challenge 1
+
+
+## Group Members
+
+```{r group-members}
+# Name - Queen's Student Number
+
+# 1.
+
+```
+
+# Part 1 — Import and Inspect the Dataset
+
+## 1. Import the Data
+
+The dataset is located in the `data` folder and is named:
+
+`A1_Data_Excel.csv`
+
+Use `read.csv()` to import the file and save it as an object called `assn1_data`.
+
+```{r import-data}
+
+assn1_data <- read.csv("")
+
+```
+
+---
+
+## 2. Inspect the Data
+
+Use the following functions to examine the dataset:
+
+- `class()`
+- `dim()`
+- `str()`
+- `head()`
+- `tail()`
+
+```{r inspect-data}
+
+# class()
+
+
+# dim()
+
+
+# str()
+
+
+# head()
+
+
+# tail()
+
+```
+
+---
+
+## 3. Clean the Dataset
+
+Based on your inspection, retain the appropriate rows and columns.
+
+Save the cleaned dataset as `assn1_data_mod`.
+
+```{r clean-data}
+
+assn1_data_mod <- 
+
+```
+
+---
+
+## 4. Calculate Ovary Area
+
+Create a new variable called `ovary_area` using:
+
+\[
+\text{ovary area} = \text{ovary width} \times \text{ovary height}
+\]
+
+```{r ovary-area}
+
+assn1_data_mod$ovary_area <- 
+
+```
+
+Use `head()` to confirm that the new column was created.
+
+```{r check-ovary-area}
+
+# Check the first few rows.
+
+```
+
+# Part 2 — Simulate and Combine Data
+
+You will now create a small simulated dataset with the same variables as the original dataset.
+
+For continuous variables such as ovary width and ovary height, generate values from a **normal distribution** using `rnorm()`. Use a mean and standard deviation similar to those in the previously loaded `assn1_data_mod` dataset. You can calculate these values from the original data using `mean()` and `sd()`.
+
+Before generating any random values, use `set.seed()` so that your simulated results can be reproduced.
+
+Use the seed value `343`.
+
+```{r set-seed}
+
+set.seed(343)
+
+```
+
+> Run `set.seed(343)` before generating your simulated values. Using the same seed will produce the same random values each time the code is run.
+
+## 5. Create Vectors
+
+Create vectors for **10 new observations**.
+
+### Population Type
+
+Create a vector called `sim_population_type` containing `"A"` and `"S"` values.
+
+```{r simulate-population}
+
+sim_population_type <- 
+
+```
+
+### Ovary Width
+
+Create a numeric vector called `sim_ovary_width` containing 10 simulated ovary-width values.
+
+Use `rnorm()` and choose the mean and standard deviation based on the ovary-width values in `assn1_data_mod`.
+
+```{r simulate-width}
+
+#mean of ovary_width from assn1_data_mod
+
+
+#sd of ovary_width from assn1_data_mod
+
+
+sim_ovary_width <- 
+
+```
+
+### Ovary Height
+
+Create a numeric vector called `sim_ovary_height` containing 10 simulated ovary-height values.
+
+Use `rnorm()` and choose the mean and standard deviation based on the ovary-height values in `assn1_data_mod`.
+
+```{r simulate-height}
+
+#mean of ovary_height from assn1_data_mod
+
+
+#sd of ovary_height from assn1_data_mod
+
+
+sim_ovary_height <- 
+
+```
+
+### Flower Number
+
+Create a numeric vector called `sim_flower_number` containing 10 simulated flower-count values.
+
+```{r simulate-flowers}
+
+#mean of flower_number from assn1_data_mod
+
+
+#sd of flower_number from assn1_data_mod
+
+
+
+sim_flower_number <- 
+
+```
+
+---
+
+## 6. Create a Simulated Data Frame
+
+Combine your four vectors into a data frame called `sim_data`.
+
+Make sure the column names match the corresponding columns in `assn1_data_mod`.
+
+```{r create-sim-data}
+
+sim_data <- 
+
+```
+
+Calculate `ovary_area` for the simulated observations.
+
+```{r simulated-ovary-area}
+
+sim_data$ovary_area <- 
+
+```
+
+Use `str()` and `head()` to inspect your simulated dataset.
+
+```{r inspect-sim-data}
+
+# str()
+
+
+# head()
+
+```
+
+---
+
+## 7. Combine the Datasets
+
+Combine the original cleaned dataset and the simulated dataset using `rbind()`.
+
+Save the combined dataset as `combined_data`.
+
+```{r combine-data}
+
+combined_data <- 
+
+```
+
+Check the dimensions of the combined dataset.
+
+```{r combined-dimensions}
+
+# Check the dimensions.
+
+```
+
+# Part 3 — Basic Summary Statistics
+
+## 8. Flower Number Summary Statistics
+
+Calculate the following for `flower_number` in `combined_data`:
+
+- Minimum
+- Maximum
+- Mean
+- Median
+- Standard deviation
+
+```{r flower-summary}
+
+# Minimum
+
+
+# Maximum
+
+
+# Mean
+
+
+# Median
+
+
+# Standard deviation
+
+```
+
+---
+
+## 9. Use `summary()`
+
+Use `summary()` on both `ovary_area` and `flower_number`.
+
+```{r summary-function}
+
+# Ovary area
+
+
+# Flower number
+
+```
+
+**Question 1:** Which statistic that you calculated manually is not included in the output from `summary()`?
+
+**Answer:**  
+
+---
+
+## 10. Compare Population Types
+
+Create two subsets from `combined_data`:
+
+- `asexual_data` for population type `"A"`
+- `sexual_data` for population type `"S"`
+
+```{r population-subsets}
+
+asexual_data <- 
+
+
+sexual_data <- 
+
+```
+
+Calculate the mean ovary area for each group.
+
+```{r compare-populations}
+
+# Mean ovary area for A
+
+
+# Mean ovary area for S
+
+```
+
+**Question 1:** Which population type has the larger mean ovary area?
+
+**Answer:**  
+
+---
+
+## 11. Visualization of ovary area
+
+Use `ggplot2` to create a figure of your choice comparing ovary area between population types using `theme_classic`
+
+Your figure should include:
+
+- use `facet_wrap` or `facet_grid` if needed
+- appropriate axis labels
+- a descriptive title
+- legends if necessary
+
+```{r load the library}
+
+```
+
+```{r visualization of ovary_width}
+
+```
