@@ -155,7 +155,7 @@ mean(assn1_data_mod$ovary_width, na.rm = TRUE)
 sd(assn1_data_mod$ovary_width, na.rm = TRUE)
 
 
-sim_ovary_width <- sim_ovary_width <- rnorm(
+sim_ovary_width <- rnorm(
   n = 10,
   mean = 3.42,
   sd = 0.29)
@@ -197,10 +197,9 @@ mean(assn1_data_mod$flower_number, na.rm = TRUE)
 sd(assn1_data_mod$flower_number, na.rm = TRUE)
 
 
-sim_flower_number <- sim_ovary_height <- rnorm(
+sim_flower_number <- rpois(
   n = 10,
-  mean = 58.0156,
-  sd = 44.13149)
+  lambda = 58.0156)
 
 ```
 
@@ -351,7 +350,7 @@ mean(sexual_data$ovary_area, na.rm = TRUE)
 
 ```
 
-**Question 1:** Which population type has the larger mean ovary area?
+**Question 2:** Which population type has the larger mean ovary area?
 
 **Answer:**  
 

@@ -323,7 +323,7 @@ Calculate the mean ovary area for each group.
 
 ```
 
-**Question 1:** Which population type has the larger mean ovary area?
+**Question 2:** Which population type has the larger mean ovary area?
 
 **Answer:**  
 
@@ -331,11 +331,10 @@ Calculate the mean ovary area for each group.
 
 ## 11. Visualization of ovary area
 
-Use `ggplot2` to create a figure of your choice comparing ovary area between population types using `theme_classic`
+Use `ggplot2` to create a figure of your choice comparing ovary area between population types 
 
 Your figure should include:
 
-- use `facet_wrap` or `facet_grid` if needed
 - appropriate axis labels
 - a descriptive title
 - legends if necessary
