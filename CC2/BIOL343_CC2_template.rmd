@@ -1,0 +1,54 @@
+---
+title: "Coding Challenge 2"
+author: 'Group Number #'
+date: "2026-09-07"
+output: pdf_document
+---
+
+# BIOL343 Coding Challenge 2
+
+
+## 1. Add your group members name with student id and the github repo
+```{r group-members with the github repo}
+# Name - Queen's Student Number (github repo)
+
+# 1.
+
+```
+
+## 2. Run an setup chuck and when it is knitted it should not appear in the document.
+
+```{r setup}
+knitr::opts_chunk$set(echo = TRUE)
+```
+---
+
+## 3. Now, import the dataset used in the coding challenge 1
+
+```{r import the data}
+cc1_data <-
+```
+---
+
+## 4. Use functions you learnt previously from coding challenge 1 to inspect the data and retain the appropriate rows and columns. For this chunk, show only the code but not the printed output in the final knitted document.
+
+```{r data inspect}
+
+```
+---
+## 5. Calculate summary statistics of average august temperature using `summary()` and construct an table. For this chunk, hide both code and results.
+
+```{r summary statistics}
+
+```
+##Summary statistics of average temperature in August
+
+
+---
+## 6. As a final step, insert an image of study species (i.e. *Solanum lycopersicum*) with the source of the image.
+
+**INSERT HERE**
+
+---
+
+
