@@ -1,5 +1,5 @@
 ---
-title: "Coding Challenge 2"
+title: "BIOL343 Coding Challenge 2"
 author: 'Group Number #'
 date: "2026-09-07"
 output: html_document
