@@ -2,7 +2,7 @@
 title: "BIOL343 Coding Challenge 1"
 author: "Group Members"
 date: "2026-09-02"
-output: pdf_document
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Group Members
 
-```{r group-members}
+```{r group_members}
 # Name - Queen's Student Number
 
 # 1.
@@ -31,7 +31,7 @@ The dataset is located in the `data` folder and is named:
 
 Use `read.csv()` to import the file and save it as an object called `assn1_data`.
 
-```{r import-data}
+```{r import_data}
 
 assn1_data <- read.csv("")
 
@@ -49,7 +49,7 @@ Use the following functions to examine the dataset:
 - `head()`
 - `tail()`
 
-```{r inspect-data}
+```{r inspect_data}
 
 # class()
 
@@ -75,7 +75,7 @@ Based on your inspection, retain the appropriate rows and columns.
 
 Save the cleaned dataset as `assn1_data_mod`.
 
-```{r clean-data}
+```{r clean_data}
 
 assn1_data_mod <- 
 
@@ -91,7 +91,7 @@ Create a new variable called `ovary_area` using:
 \text{ovary area} = \text{ovary width} \times \text{ovary height}
 \]
 
-```{r ovary-area}
+```{r ovary_area}
 
 assn1_data_mod$ovary_area <- 
 
@@ -99,7 +99,7 @@ assn1_data_mod$ovary_area <-
 
 Use `head()` to confirm that the new column was created.
 
-```{r check-ovary-area}
+```{r check_ovary_area}
 
 # Check the first few rows.
 
@@ -109,7 +109,7 @@ Use `head()` to confirm that the new column was created.
 
 You will now create a small simulated dataset with the same variables as the original dataset.
 
-For continuous variables such as ovary width and ovary height, generate values from a **normal distribution** using `rnorm()`. Use a mean and standard deviation similar to those in the previously loaded `assn1_data_mod` dataset. You can calculate these values from the original data using `mean()` and `sd()`.
+For continuous variables such as ovary width and ovary height, generate values from a **normal distribution** using `rnorm()` and flower number using `rpois()`. Use a mean and standard deviation similar to those in the previously loaded `assn1_data_mod` dataset. You can calculate these values from the original data using `mean()` and `sd()`.
 
 Before generating any random values, use `set.seed()` so that your simulated results can be reproduced.
 
@@ -339,10 +339,10 @@ Your figure should include:
 - a descriptive title
 - legends if necessary
 
-```{r load the library}
+```{r load_the_library}
 
 ```
 
-```{r visualization of ovary_width}
+```{r visualization_of_ovary_width}
 
 ```
